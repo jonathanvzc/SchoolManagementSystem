@@ -1,19 +1,18 @@
 import java.util.Date;
 
-public class Estudiante extends Persona {
-    private int id;
-    private String nombre;
-    private String apellido;
-    private String fechaDeNacimiento;
-    private String estado;
+public class Persona {
+    protected int id;
+    protected String nombre;
+    protected String apellido;
+    protected String fechaDeNacimiento;
 
     // Constructor
-    public Estudiante(int id, String nombre, String apellido, String fechaDeNacimiento, String estado) {
-        super(id, nombre, apellido, fechaDeNacimiento);
-        this.estado = estado;
+    public Persona(int id, String nombre, String apellido, String fechaDeNacimiento) {
+        this.id = id;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaDeNacimiento = fechaDeNacimiento;
     }
-    // Constructor vacio
-
 
     public int getId() {
         return id;
@@ -45,13 +44,5 @@ public class Estudiante extends Persona {
 
     public void setFechaDeNacimiento(java.lang.String fechaDeNacimiento) {
         this.fechaDeNacimiento = fechaDeNacimiento;
-    }
-
-    public java.lang.String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(java.lang.String estado) {
-        this.estado = estado;
     }
 }
